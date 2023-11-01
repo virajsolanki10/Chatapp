@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="chat.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #202124; /* Dark theme background color */
+            color: #ffffff; /* Text color */
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /* Left Pane */
+        .left-pane {
+            width: 25%;
+            height: 100vh;
+            background-color: #292b2e; /* Left pane background color */
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Top Header in Left Pane */
+        .top-header {
+            position: sticky;
+            top: 0;
+            background-color: #292b2e; /* Top header background color */
+        }
+
+        /* New Chat Button */
+        .new-chat-button {
+            width: 80%;
+            background-color: #333; /* Button background color */
+            color: #fff; /* Button text color */
+            border: none;
+            border-radius: 25px;
+            padding: 10px 0;
+            margin: 10px auto;
+            display: block;
+            text-align: center;
+        }
+
+        /* Close Sidebar Button */
+        .close-sidebar-button {
+            width: 20%;
+            background-color: #333; /* Button background color */
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            display: block;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* List of Chats */
+        .list-of-chats {
+            height: calc(100% - 150px); /* Adjust height for header and profile section */
+            overflow-y: auto;
+        }
+
+        /* Single Chat Item */
+        .single-chat {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .chat-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .chat-title {
+            flex: 1;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            position: absolute;
+            bottom: 0;
+        }
+
+        /* Upgrade Plan Section */
+        .upgrade-plan {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .account-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .upgrade-text {
+            flex: 1;
+        }
+
+        .new-label {
+            margin-left: 10px;
+        }
+
+        /* Profile Details Section */
+        .profile-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-avatar {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .user-name {
+            flex: 1;
+        }
+
+        .more-options {
+            font-size: 24px;
+        }
+
+        /* Right Pane */
+        .right-pane {
+            width: 75%;
+            background-color: #333; /* Right pane background color */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Top Header in Right Pane */
+        .right-top-header {
+            background-color: #292b2e; /* Right pane top header background color */
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        /* GPT Buttons */
+        .gpt-button {
+            width: 50%;
+            background-color: #555; /* Button background color */
+            color: #fff; /* Button text color */
+            border: none;
+            border-radius: 25px;
+            padding: 10px 0;
+            margin: 0 5px;
+            text-align: center;
+        }
+
+        /* Chat Section */
+        .chat-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Prompt Suggestions */
+        .prompt-suggestions {
+            background-color: #444; /* Background color for prompt suggestions */
+            padding: 10px;
+            position: sticky;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Pane -->
+        <div class="left-pane">
+            <div class="top-header">
+                <button class="new-chat-button">New Chat</button>
+                <button class="close-sidebar-button"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="list-of-chats">
+                <!-- Chat items here -->
+                <div class="single-chat">
+                    <i class="fa fa-comment chat-icon"></i>
+                    <div class="chat-title">Chat Title</div>
+                </div>
+            </div>
+            <div class="profile-section">
+                <div class="upgrade-plan">
+                    <i class="fa fa-user account-icon"></i>
+                    <div class="upgrade-text">Upgrade to Plus</div>
+                    <span class="new-label">new</span>
+                </div>
+                <div class="profile-details">
+                    <i class="fa fa-user user-avatar"></i>
+                    <div class="user-name">Username</div>
+                    <i class="fa fa-ellipsis-v more-options"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Pane -->
+        <div class="right-pane">
+            <div class="right-top-header">
+                <!-- Header content if any -->
+            </div>
+            <div class="button-container">
+                <button class="gpt-button">GPT 3.5</button>
+                <button class="gpt-button">GPT 4</button>
+            </div>
+            <div class="chat-section">
+                <!-- Chat content if any -->
+            </div>
+            <div class="prompt-suggestions">
+                <!-- Prompt suggestions content if any -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
